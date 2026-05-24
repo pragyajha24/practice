@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  font-family: sans-serif;
+  font-family: "Quicksand";
+}
+
+.main {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+  gap: 2rem;
+
+  height: 66vh;
+  margin: 1.3rem;
+}
+
+.header {
+  /* background-color: yellow; */
+  padding: 2rem;
+  font-size: 1.8rem;
+}
+
+.date {
+  font-size: 1.3rem;
+}
+
+.title {
+  text-decoration: underline;
+}
+
+.list {
+  /* background-color: pink; */
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.7rem;
+}
+
+.form-add-task {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* input {
+  padding: 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+} */
+
+input,
+button {
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 2.1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.button {
+  background-color: antiquewhite;
+}
+
+.button:hover {
+  background-color: thistle;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+input[type="checkbox"] {
+  height: 2rem;
+  width: 2rem;
+  accent-color: thistle;
+}
