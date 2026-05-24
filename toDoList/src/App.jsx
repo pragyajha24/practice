@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./index.css";
 
-const initialList = [
-  { id: 1, task: "Study children prop" },
-  { id: 2, task: "Change bedsheet" },
-];
+// const initialList = [
+//   { id: 1, task: "Study children prop" },
+//   { id: 2, task: "Change bedsheet" },
+// ];
 
 export default function App() {
   const [items, setItems] = useState([]);
@@ -32,6 +32,8 @@ export default function App() {
   }
 
   function handleClearList() {
+    if (!items.length) return;
+
     const confirmed = window.confirm(
       "Are you sure you want to delete all tasks?",
     );
@@ -41,6 +43,7 @@ export default function App() {
 
   return (
     <main className="main">
+      <DateDisplay />
       <Header />
       <FormAddTask onAddTask={handleAddTask} />
       <List
@@ -53,15 +56,16 @@ export default function App() {
   );
 }
 
+function DateDisplay() {
+  const [date, setDate] = useState(new Date());
+
+  return <p className="date">Date :{date.toLocaleDateString("en-GB")} </p>;
+}
+
 function Header() {
-  // const date = new Date();
-
-  // const [currentDate, setCurrentDate] = useState(date);
-
   return (
     <div className="header">
       <h3 className="title">What's on your to do list today?</h3>
-      {/* <p className="date">Date : {currentDate}</p> */}
     </div>
   );
 }

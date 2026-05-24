@@ -80,17 +80,19 @@ body {
   gap: 2rem;
 
   height: 66vh;
-  margin: 1.3rem;
+  margin: 1.3rem 7rem;
 }
 
 .header {
-  /* background-color: yellow; */
   padding: 2rem;
   font-size: 1.8rem;
 }
 
 .date {
-  font-size: 1.3rem;
+  font-size: 1rem;
+
+  margin-left: auto;
+  color: thistle;
 }
 
 .title {
@@ -98,7 +100,6 @@ body {
 }
 
 .list {
-  /* background-color: pink; */
   padding: 2rem;
   display: flex;
   justify-content: space-between;
@@ -133,6 +134,10 @@ button {
   padding: 1rem 2.1rem;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+input {
+  border: 1px solid grey;
 }
 
 .button {
